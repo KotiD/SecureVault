@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SecureVault | Mobile Password Vault + Browser Extension</title>
+    <meta
+      name="description"
+      content="SecureVault keeps all your real passwords on your mobile device and uses secure short-lived sessions for browser login."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav container">
+        <div class="brand">SecureVault</div>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#downloads">Downloads</a>
+        </div>
+      </nav>
+
+      <div class="hero-content container">
+        <p class="eyebrow">Secure Password Access</p>
+        <h1>Passwords stay on your phone. Login stays fast.</h1>
+        <p class="subtitle">
+          SecureVault combines a mobile vault, QR-based browser extension login,
+          and short-lived central sessions without storing your real passwords in the cloud.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#downloads">Get The App</a>
+          <a class="btn secondary" href="#workflow">See How It Works</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="features" class="section container">
+        <h2>Key Features</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Local-First Password Storage</h3>
+            <p>
+              All real credentials are stored in your local encrypted vault on mobile.
+              Master password is never stored in centralized DB.
+            </p>
+          </article>
+          <article class="card">
+            <h3>QR Session Login</h3>
+            <p>
+              Browser extension generates a QR session. Mobile scans it, resolves
+              credential locally, and sends only mapped session payload.
+            </p>
+          </article>
+          <article class="card">
+            <h3>5-Minute Session TTL</h3>
+            <p>
+              Central session data auto-expires after 5 minutes or is deleted immediately
+              after successful login completion.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Authenticator for New Device</h3>
+            <p>
+              New device setup for an existing email requires an in-app authenticator code
+              from a registered device.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Browser Extension Autofill</h3>
+            <p>
+              User types mapped password in extension, extension decodes and autofills
+              website login securely.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Supabase Session Backend</h3>
+            <p>
+              Central DB stores only session/device metadata (`auth_sessions`,
+              `user_devices`, `device_auth_codes`) and never real credentials.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="workflow" class="section alt">
+        <div class="container">
+          <h2>How It Works</h2>
+          <ol class="steps">
+            <li>User opens target website and clicks SecureVault extension.</li>
+            <li>Extension creates session and shows QR.</li>
+            <li>Mobile app scans QR and verifies session + domain.</li>
+            <li>Mobile fetches credential from local vault and creates mapped password.</li>
+            <li>User enters mapped password in extension.</li>
+            <li>Extension decodes, autofills login, and completes session.</li>
+            <li>Session is deleted immediately or expires after 5 minutes.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="downloads" class="section container">
+        <h2>Downloads</h2>
+        <p class="subtitle">
+          Replace these links with your live APK and extension store URLs.
+        </p>
+        <div class="download-grid">
+          <a class="download-card" href="https://example.com/securevault-app.apk" target="_blank" rel="noreferrer">
+            <span class="tag">Android App</span>
+            <h3>Download SecureVault APK</h3>
+            <p>Install the mobile vault app to manage and approve logins.</p>
+          </a>
+          <a class="download-card" href="https://example.com/securevault-extension" target="_blank" rel="noreferrer">
+            <span class="tag">Browser Extension</span>
+            <h3>Download Extension</h3>
+            <p>Use QR handoff and secure autofill from your local mobile vault.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>SecureVault • Local-first passwords • Session-based browser login</p>
+      </div>
+    </footer>
+  </body>
+</html>
